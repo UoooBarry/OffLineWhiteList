@@ -1,0 +1,10 @@
+name: OffLineWhiteList
+author: FAFAREN
+version: 1.0
+main: FaFaRen.Minecraft.WhiteList.OffLineWhiteList
+description: An simple plugin that allows you to add offline users to whitelist
+
+commands:
+  owl:
+   usage: /<command>
+   description: Add an whitelist member
