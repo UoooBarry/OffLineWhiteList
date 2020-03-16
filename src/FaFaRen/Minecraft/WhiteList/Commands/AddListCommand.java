@@ -28,8 +28,10 @@ public class AddListCommand implements CommandExecutor {
 					if (args[1] != null) {
 						playerName = args[1];
 					}else {
+						sender.sendMessage(ChatColor.DARK_RED + "/owl add <PLAYER>");
 						return false;
 					}
+					
 					sender.sendMessage(ChatColor.DARK_GREEN + "Adding UUID: " + getOfflinePlayerUUID(playerName)
 							+ " name: " + playerName + " to whitelist");
 					try {
@@ -56,12 +58,14 @@ public class AddListCommand implements CommandExecutor {
 				
 				return true;
 			case "remove":
-				if (sender.hasPermission("OffLineWhiteList.list")) {
+				if (sender.hasPermission("OffLineWhiteList.remove")) {
 				if (args[1] != null) {
 					playerName = args[1];
 				}else {
+					sender.sendMessage(ChatColor.DARK_RED + "/owl remove <PLAYER>");
 					return false;
 				}
+				
 				Bukkit.dispatchCommand(sender, "whitelist remove " + playerName);
 				}else {
 					sender.sendMessage(ChatColor.DARK_RED + "Sorry, but you don't have this permission");
@@ -69,6 +73,7 @@ public class AddListCommand implements CommandExecutor {
 				
 				return true;
 			default:
+				sender.sendMessage(ChatColor.DARK_RED + "Unknown command!");
 				return false;
 			}
 
