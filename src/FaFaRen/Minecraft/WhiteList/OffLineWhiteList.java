@@ -10,12 +10,12 @@ import FaFaRen.Minecraft.WhiteList.Commands.AddListCommand;
 public class OffLineWhiteList extends JavaPlugin{
 	
  public void onEnable() {
-	 getServer().getConsoleSender().sendMessage(ChatColor.DARK_GREEN + "Offline white list is enable");
+	 getServer().getConsoleSender().sendMessage(ChatColor.DARK_GREEN + "Offline White List is enable");
 	 this.getCommand("owl").setExecutor(new AddListCommand()); 
  }
  
  public void onDisable() {
-	 getServer().getConsoleSender().sendMessage(ChatColor.DARK_GREEN + "Offline white list is disable");
+	 getServer().getConsoleSender().sendMessage(ChatColor.DARK_GREEN + "Offline White List is disable");
  }
  
 }
