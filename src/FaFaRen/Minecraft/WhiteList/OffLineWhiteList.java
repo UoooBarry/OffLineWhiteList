@@ -18,4 +18,8 @@ public class OffLineWhiteList extends JavaPlugin{
 	 getServer().getConsoleSender().sendMessage(ChatColor.DARK_GREEN + "Offline White List is disable");
  }
  
+ public void display() {
+	 System.out.println("King of the game");
+ }
 }
+
